@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tyler">
+    <meta name="description" content="travelling assistance page for TDP">
+    <meta name="page" content="html tags, structure, images and content ">
+    <title>The Travelling Assistance Page</title>
+</head>
+<body>
+<header>
+    <img src="../assets/images/TDP logo.png" 
+     width="150"
+     height="80"
+    alt="TDP's logo ">
+<!--Adujusting the image's width and height as well as getting the image from assets but having to use .. -->
+
+<nav>
+    <ul>
+         <li><a href="../index.html">Home</a></li>
+        <!--Using li tag and a href tag for creating the link to the homepage-->
+
+        <li><a href="about.html">About Us</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the about us page-->
+
+        <li><a href="destination.html">Destination</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the destination page-->
+
+        <li><a href="travellingassistance.html">Travelling Assistance</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the travelling assistance page-->
+
+
+        <li><a href="destinationvsdestination.html">Destination Vs Destination</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the Distantion vs destination page-->
+
+
+
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the enquiry page-->
+
+        <li><a href="contact.html">Contact Us</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the contact us page-->
+
+
+    </ul>
+</nav>
+</header>
+
+<main>
+<!--Content that will be for the page-->
+<section>
+<!--Using section tag for explaining what this page is about-->
+<h2>Travelling Assistance</h2>
+
+<p>
+    It's hard to plan all the time for a trip you don't know where to go
+<br>
+   
+   Don't worry, TDP is here for you and will provide useful resources to plan your trip to be the best
+</p>
+</section>
+
+<section>
+
+    <div>
+<h2>Please Don't be Afraid to Send a Message to Us</h2>
+
+<form action="#" method="post">
+<!-- a form is created to collect the person's information the typed--> 
+    
+    <label for="Full name">Full Name:</label>
+    <input type="text"
+    id="Full name"
+    name="Full name"
+    required>
+<!--Full name must be written and has to be a text so no special characters and this information is made to be required -->
+   <br>
+   <br>
+    
+   <label for="email">Email Address:</label>
+    <input type="email"
+    id="email"
+    name="email"
+    required>
+<!--An email is required from the person and type of input must be like an email-->
+    <br>
+    <br>
+
+    <label for="message">Description of the Assistance You Need:</label>
+    <textarea id="message"
+    name="message"
+    rows="6"
+    required>
+    </textarea>
+<!---using a textarea so the person can write a description of what assistance they need-->
+
+    <button type="submit">Submit</button>
+    <!--Created a button to be able to submit information-->
+
+</form>
+
+    </div>
+
+    <div>
+    
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <details>
+
+        <summary>
+<!--the detail tag and the summary will work together and when the person clicks on the question they will see the 
+statement/answer below-->
+        Is it possible to be able to call or contact TDP?
+        </summary>
+    
+        <p>
+            You are able to go to the contact page and contact us there or you can send us a message on this page
+        </p>
+    </details>
+
+    <details>
+        <summary>
+            Is it possible to compare the destinations instead of looking at one place at a time?
+
+        </summary>
+
+        <p>
+            Yes you can go to the destination vs destination page and compare the two destination you wish to do
+        </p>
+    </details>
+
+
+</section>
+</main>
+
+<footer>
+    <!--The footer tag is gonna be used for display the copyrights of the website-->
+    <p>&copy; 2026 Travelling Service Provider TDP</p> 
+    <!--&copy displays the copyrights symbol along with the sentence after it-->   
+    </footer>
+</body>
+</html>
