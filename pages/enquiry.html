@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tyler">
+    <meta name="description" content="enquiry page for TDP">
+    <meta name="page" content="html tags, structure, images and content ">
+    <title>The Enquiry Page</title>
+</head>
+<body>
+<header>
+<!--The header is gonna be used for the logo and the links to other pages-->
+
+  <img src="../assets/images/TDP logo.png" 
+     width="150"
+     height="80"
+    alt="TDP's logo ">
+    <!--Adujusting the image's width and height as well as getting the image from assets but having to use .. -->
+
+   <nav>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <!--Using li tag and a href tag for creating the link to the homepage-->
+
+        <li><a href="about.html">About Us</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the about us page-->
+
+        <li><a href="destination.html">Destination</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the destination page-->
+
+        <li><a href="travellingassistance.html">Travelling Assistance</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the travelling assistance page-->
+
+
+        <li><a href="destinationvsdestination.html">Destination Vs Destination</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the Distantion vs destination page-->
+
+
+
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the enquiry page-->
+
+        <li><a href="contact.html">Contact Us</a></li>
+        <!--Using li tag and "a href" tag for creating the link to the contact us page-->
+
+
+
+        
+
+    </ul>
+    </nav> 
+    </header>
+    <main>
+<!--main tag for the enquiry form-->
+    <section>
+<!--Section tag used as the enquiry form is being introduced-->
+    
+    <h2>Please Don't Be Afraid and Make the Enquiry </h2>
+
+    <p>
+        Do you have any questions about certain places?
+
+    <br>
+       
+       or is there any other questions maybe for trip planning?
+
+    <br>
+       If so please complete the enquiry form
+    </p>
+    </section>
+    <section>
+<!--Actual enquiry form being made-->
+    <h2>Enquiry Form</h2>
+
+    <form action="#" method="post">
+<!-- a form is created to collect the person's information the typed--> 
+    
+    <label for="Full name">Full Name:</label>
+    <input type="text"
+    id="Full name"
+    name="Full name"
+    required>
+<!--Full name must be written and has to be a text so no special characters and this information is made to be required -->
+   <br>
+   <br>
+    
+   <label for="email">Email Address:</label>
+    <input type="email"
+    id="email"
+    name="email"
+    required>
+<!--An email is required from the person and type of input must be like an email-->
+    <br>
+    <br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel"
+    id="phone "
+    name="phone"
+    required>
+<!--A phone number is required from the person and input type is tel which is like a phone number-->
+    <br>
+    <br>
+
+    <label for="destination">Place of Interest:</label>
+    
+    <select id="destination" name="destination">
+    
+        <option value="">Select a Place</option>
+        <option value="Cape Town">Cape Town</option>
+        <option value="Drakensberg">Drakensberg</option>
+        <option value="Durban">Durban</option>
+        <option value="Garden Route District Municipality"> Garden Route District Municipality</option>
+        <option value="Johannesburg">Johannesburg</option>
+        <option value="Kruger National Park">Kruger National Park</option>
+<!--Using the option value so the person can the place of their interest-->
+    </select>
+    <br>
+    <br>
+
+    <button type="submit">Submit</button>
+
+    </form>
+
+
+    
+    </section>
+    </main>
+
+</body>
+</html>
