@@ -75,6 +75,8 @@ However I still need to visuallly design the web page properly, add icons and ce
 ## References
 Adrian Olichon, [s.a.]. Stunning landscape of Cape Town's iconic Table Mountain under a bright blue sky. [electronic print] Available at: <https://www.pexels.com/photo/majestic-view-of-table-mountain-from-the-highway-36597753/> [Accessed 29 August 2026].
 
+Canva, 2026. What will you design today?. [online] Available at: <https://www.canva.com/> [Accessed 29 August 2026].
+
 Cape Town Tourism, 2026. Welcome to Cape Town. [online] Available at: <https://www.capetown.travel/> [Accessed 29 August 2026].
 
 Durban Tourism, 2026. Discover What's On in Durban. [online] Available at: <https://visitdurban.travel/> [Accessed 29 August 2026].
