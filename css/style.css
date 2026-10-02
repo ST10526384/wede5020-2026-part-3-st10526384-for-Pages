@@ -1,0 +1,33 @@
+
+:root {
+ --forest-green: #228b22;
+ --cream: #ffdd00;
+ --brown: #964b00;
+ --white: #fff;
+ --light-background: #f7f8f4;
+ --text-colour: #292929;
+ --border-colour: #ddd;
+ 
+
+}
+
+*{
+    box-sizing: border-box;
+} 
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: var(--white);
+    color: var(--text-colour);
+    font-family: "Open Sans"; sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+
+
+}
+
