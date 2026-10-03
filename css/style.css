@@ -267,4 +267,56 @@ textarea:focus{
 
 
 
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
 
+th{
+    padding: 0.8rem;
+    border: 1px solid var(--border-colour);
+    text-align: left;
+    vertical-align: top;
+
+}
+td{
+    padding: 0.8rem;
+    border: 1px solid var(--border-colour);
+    text-align: left;
+    vertical-align: top;
+    
+}
+
+th{
+    background-color: var(--forest-green);
+    color: var(--white);
+    font-family: "Montserrat Alternates", sans-serif;
+
+}
+
+details{
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid var(--border-colour);
+    border-radius: 5px;
+}
+
+summary{
+    color: var(--forest-green);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+
+footer{
+    background-color: var(--forest-green);
+    color: var(--white);
+    padding: 1.5rem 5%;
+    text-align: center;
+}
+footer a{
+    color: var(--cream);
+}
