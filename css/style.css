@@ -105,3 +105,20 @@ nav a:focus{
     color: var(--text-colour);
 }
 
+
+
+main{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+}
+
+section {
+    margin-bottom: 2rem;
+}
+section img{
+    border-radius: 8px;
+}
