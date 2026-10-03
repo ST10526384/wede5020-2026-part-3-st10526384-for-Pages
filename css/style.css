@@ -207,5 +207,64 @@ input[type= "button"]{
 
 
 
+form{
+    width: 100%;
+
+}
+
+label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+
+}
+
+input{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+select{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+textarea{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+}
+
+
+textarea{
+min-height: 130px;
+resize: vertical;
+
+}
+
+input:focus{
+    outline: 2px solid var(--forest-green);
+    outline-offset: 2px;
+}
+select:focus{
+    outline: 2px solid var(--forest-green);
+    outline-offset: 2px;
+}
+textarea:focus{
+    outline: 2px solid var(--forest-green);
+    outline-offset: 2px;
+}
+
+
 
 
