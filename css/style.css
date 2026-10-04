@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: "Montserrat Alternates";
+    font-family: "Open Sans";
     src: url(../assets/fonts/OpenSans-Regular.ttf);
     font-weight: 400;
     font-style: normal;
@@ -53,7 +53,7 @@ body{
     margin: 0;
     background-color: var(--white);
     color: var(--text-colour);
-    font-family: "Open Sans"; sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 16px;
     line-height: 1.6;
 
@@ -76,7 +76,7 @@ img {
 
 
 h1, h2, h3 {
-    font-family: "Monteserrat Alternates", sans-serif;
+    font-family: "Montserrat Alternates", sans-serif;
     line-height: 1.4;
     color: var(--forest-green);
 }
