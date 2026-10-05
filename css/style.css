@@ -29,6 +29,9 @@
 
 
 }
+/*Added the fonts from googlefonts*/
+
+
 :root {
  --forest-green: #228b22;
  --cream: #ffdd00;
@@ -60,6 +63,10 @@ body{
 
 
 }
+/*added the basic styling webpage and making the default look for the webpages*/
+
+
+
 
 a {
     color: var(--forest-green);
@@ -72,6 +79,8 @@ img {
     max-width: 100%;
     height: auto;
 }
+/*code use for the images in the website and links colours*/
+
 
 
 
@@ -80,7 +89,6 @@ h1, h2, h3 {
     line-height: 1.4;
     color: var(--forest-green);
 }
-
 h1{
 font-size: 2.3rem;
 }
@@ -90,6 +98,7 @@ h2{
 h3{
     font-size: 1.3rem;
 }
+/*Customised the headings font,colour,etc.*/
 
 
 
@@ -134,6 +143,7 @@ nav a:focus{
     background-color: var(--cream);
     color: var(--text-colour);
 }
+/*Custoize the header and navigation styling*/
 
 
 
@@ -153,12 +163,13 @@ section img{
     border-radius: 8px;
 }
 
-
-
 article{
     margin-bottom: 1.5rem;
 
 }
+/*changed the main,section, section image and article to be styled for the webpages*/
+
+
 
 .card{
     padding: 1.2rem;
@@ -185,6 +196,9 @@ height: 220px;
 object-fit: cover;
 
 }
+/*created the customisation for the destinations images, headings, descriptions and links*/
+
+
 
 .featured-destinations{
     display: grid;
@@ -213,6 +227,7 @@ justify-self: center;
     margin-bottom: 0;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
+/*created a flexible layout for the destinations being diesplayed*/
 
 
 button{
@@ -261,7 +276,7 @@ input[type= "button"]{
     background-color: var(--brown);
     border-color: var(--brown);
 }
-
+/*customised the buttons and the form buttons as well*/
 
 
 form{
@@ -321,7 +336,7 @@ textarea:focus{
     outline: 2px solid var(--forest-green);
     outline-offset: 2px;
 }
-
+/*Customised the labels, text fields, etc for the form*/
 
 
 table{
@@ -351,6 +366,9 @@ th{
     font-family: "Montserrat Alternates", sans-serif;
 
 }
+/*this customises/styles the table from the destination vs destination page making look more presentable*/
+
+
 
 details{
     padding: 1rem;
@@ -364,7 +382,7 @@ summary{
     font-weight: 600;
     cursor: pointer;
 }
-
+/*customises the questions from the traveling assistance page frequently asked questions*/
 
 
 
@@ -397,7 +415,7 @@ h2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 }
-
+/*changes/adapts to a tablet screen*/
 
 
 @media(max-width: 600px) {
@@ -450,10 +468,10 @@ featured-destinations,
     grid-template-columns: 1fr;
 }
 }
-
+/*changes/adapts the website to like a mobile screen*/
 
 .destination-intro{
-    background-color: var(--light-background);
+    background-color: var(--brown);
     padding: 1.5rem;
     border: 1px solid var(--border-colour);
     border-radius: 8px;
