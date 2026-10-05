@@ -471,7 +471,7 @@ featured-destinations,
 /*changes/adapts the website to like a mobile screen*/
 
 .destination-intro{
-    background-color: var(--brown);
+    background-color: var(--cream);
     padding: 1.5rem;
     border: 1px solid var(--border-colour);
     border-radius: 8px;
