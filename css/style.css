@@ -268,11 +268,8 @@ button:hover{
     background-color: var(--brown);
     border-color: var(--brown);
 }
-input[type= "submit"]{
-    background-color: var(--brown);
-    border-color: var(--brown);
-}
-input[type= "button"]{
+input[type= "submit"] :hover,
+input[type= "button"] :hover {
     background-color: var(--brown);
     border-color: var(--brown);
 }
@@ -463,7 +460,7 @@ input[type= "submit"]{
     max-width: 100%;
 }
 
-featured-destinations,
+.featured-destinations,
 .destination-grid {
     grid-template-columns: 1fr;
 }
@@ -475,4 +472,32 @@ featured-destinations,
     padding: 1.5rem;
     border: 1px solid var(--border-colour);
     border-radius: 8px;
+}
+
+
+
+/*added active and accessbility states for a wider range*/
+button:active,
+input[type="submit"]:active,
+input[type="button"]:active{
+    background-color: var(--brown);
+    border-color: var(--brown);
+    transform: translateY(1px);
+}
+
+/* keyboard focus outline for buttons for better accessibility */
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="button"]:focus-visible{
+    outline: 3px solid var(--cream);
+    outline-offset: 2px;
+}
+
+
+nav a:active{
+    background-color: var(--brown);
+    color: var(--white);
+}
+a:active{
+    color: var(--cream);
 }
