@@ -8,6 +8,7 @@
     <meta name="page" content="html tags, structure, images and content ">
     <title>The Destination Vs Destination Page</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/destinationvsdestination.js" defer></script>
 </head>
 <body>
 <header>
@@ -35,14 +36,11 @@
 
 
 
-        <li><a href="enquiry.html">Enquiry</a></li>
+        <a href="enquiry.html">Enquiry</a>
         <!--Using li tag and "a href" tag for creating the link to the enquiry page-->
 
-        <li><a href="contact.html">Contact Us</a></li>
+        <a href="contact.html">Contact Us</a>
         <!--Using li tag and "a href" tag for creating the link to the contact us page-->
-
-
-    </ul>
 </nav>
 </header>
 
@@ -60,9 +58,9 @@
 
 <section>
 <!--Choosing the first place-->
-  <label for="destination">Destination:</label>
+  <label for="destination1">Destination:</label>
     
-    <select id="destination" name="destination">
+    <select id="destination1" name="destination1">
     
         <option value="">Select Destination 1</option>
         <option value="Cape Town">Cape Town</option>
@@ -73,11 +71,11 @@
         <option value="Kruger National Park">Kruger National Park</option>
     </select>
 <!--Choosing the second place-->
-   <label for="destination">Destination:</label>
+   <label for="destination2">Destination:</label>
     
-    <select id="destination" name="destination">
+    <select id="destination2" name="destination2">
     
-        <option value="">Select Destination 1</option>
+        <option value="">Select Destination 2</option>
         <option value="Cape Town">Cape Town</option>
         <option value="Drakensberg">Drakensberg</option>
         <option value="Durban">Durban</option>
@@ -86,21 +84,22 @@
         <option value="Kruger National Park">Kruger National Park</option>
     </select>
 
-    <button type="button">Compare</button>
+    <button type="button" id="compareButton">Compare</button>
+    <p id="compareError"></p>
 </section>
 
 <section>
 <!---This section tag will contain the comparison table for the two destinations that were selected-->
 <h2>Compare Destinations</h2>
 
-<table border="1">
+<table>
     <thead>
 <!--thead tags are use for creating the table headings-->
     
     <tr>
     <th>Catergory</th>
-    <th>Destination 1</th>
-    <th>Destination 2</th>
+    <th id="name1">Destination 1</th>
+    <th id="name2">Destination 2</th>
     </tr>
     </thead>
 <!--tags are used to create the headings appropiately-->
@@ -108,23 +107,33 @@
     
     <tr>
         <th>Located</th>
+        <td id="d1-located"></td>
+        <td id="d2-located"></td>
     
     </tr>
 
     <tr>
         <th>Attractions</th>
+         <td id="d1-attractions"></td>
+        <td id="d2-attractions"></td>
     </tr>
 
     <tr>
         <th>Activities</th>
+         <td id="d1-activities"></td>
+        <td id="d2-activities"></td>
     </tr>
 
     <tr>
         <th>When to Visit?</th>
+         <td id="d1-visit"></td>
+        <td id="d2-visit"></td>
     </tr>
 
     <tr>
         <th>Travel Requirements</th>
+         <td id="d1-travellingrequirements"></td>
+        <td id="d2-travellingrequirements"></td>
     </tr>
 </tbody>
 <!---Please note that I will need javascript for comparing the destinations so this page will only have tags that can be used-->

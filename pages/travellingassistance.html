@@ -8,7 +8,10 @@
     <meta name="page" content="html tags, structure, images and content ">
     <title>The Travelling Assistance Page</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/travellingassistance.js" defer></script>
+    
 </head>
+
 <body>
 <header>
     <a href="../index.html">
@@ -66,35 +69,28 @@
     <div>
 <h2>Please Don't be Afraid to Send a Message to Us</h2>
 
-<form>
+<form id="assistanceForm" novalidate>
 <!-- a form is created to collect the person's information the typed--> 
     
     <label for="fullname">Full Name:</label>
-    <input type="text"
-    id="fullname"
-    name="fullname"
-    required>
+    <input type="text" id="fullname" name="fullname" required>
+    <p class="error" id="errorName"></p>
 <!--Full name must be written and has to be a text so no special characters and this information is made to be required -->
-   <br>
-   <br>
+  
     
    <label for="email">Email Address:</label>
-    <input type="email"
-    id="email"
-    name="email"
-    required>
+    <input type="email" id="email" name="email" required>
+    <p class="error" id="errorEmail"></p>
 <!--An email is required from the person and type of input must be like an email-->
-    <br>
-    <br>
+
 
     <label for="message">Description of the Assistance You Need:</label>
-    <textarea id="message"
-    name="message"
-    rows="6"
-    required></textarea>
+    <textarea id="message" name="message" rows="6" required></textarea>
+    <p class="error" id="errorMessage"></p>
 <!---using a textarea so the person can write a description of what assistance they need-->
 
     <button type="submit">Submit</button>
+    <p id="pageSuccessful"></p>
     <!--Created a button to be able to submit information-->
 
 </form>

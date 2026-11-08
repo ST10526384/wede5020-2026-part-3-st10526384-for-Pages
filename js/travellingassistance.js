@@ -11,7 +11,7 @@ const message = document.getElementById("message").value.trim();
 //retrieves the values/information user has typed in
 
 const errorName = document.getElementById("errorName");
-const errorEmail = document.getElementById("errorEmai");
+const errorEmail = document.getElementById("errorEmail");
 const errorMessage = document.getElementById("errorMessage");
 const formSuccessful = document.getElementById("pageSuccessful");
 //retrieves these errors that user typed 

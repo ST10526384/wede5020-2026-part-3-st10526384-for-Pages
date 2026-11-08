@@ -436,3 +436,10 @@ nav a:active{
 a:active{
     color: var(--cream);
 }
+
+
+.error {
+    color: #c0392b;
+    font-size: 0.9rem;
+    margin: 0.2rem 0 0;
+}

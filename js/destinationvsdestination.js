@@ -10,7 +10,7 @@ const places = {
     },
 //added information for Cape Town
 
-    "The kruger National Park": {
+    "kruger National Park": {
         located: "Mpumalanga & Limpopo",
         attractions: "Wildlife, Exploring and see the safari routes, Relaxing, Seeing and exploring the natural landscapes",
         activities: "Wildlife Sightseeing, Photographing wildlife, Game drives",
@@ -38,7 +38,7 @@ const places = {
     },
 //added information for Garden Route Municipality
 
-    "Drakensburg": {
+    "Drakensberg": {
         located: "KZN",
         attractions: "Tugela Falls, Rock art sites, Mountain",
         activities: "Sightseeing nature, Taking photos, Hiking, nature walks, Mountain Sightseeing",
@@ -57,7 +57,7 @@ const places = {
     }
 };
 
-const compareButton = document.getElementById(compareButton)
+const compareButton = document.getElementById("compareButton")
 
 compareButton.addEventListener("click", function () {
     const option1 = document.getElementById("destination1").value;
@@ -100,11 +100,11 @@ document.getElementById("d1-travellingrequirements").textContent = d1.travelling
 
 document.getElementById("d2-located").textContent = d2.located
 document.getElementById("d2-attractions").textContent = d2.attractions
-document.getElementById("d2-activities").textContent = d12.activities
+document.getElementById("d2-activities").textContent = d2.activities
 document.getElementById("d2-visit").textContent = d2.visit
 document.getElementById("d2-travellingrequirements").textContent = d2.travellingrequirements
 //The details will be filled in using what has been written in the constants of the places e.g. cape town storing different information
 
 
 
-})
+});
