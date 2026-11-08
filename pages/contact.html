@@ -8,6 +8,7 @@
     <meta name="page" content="html tags, structure, images and content ">
     <title>The Contact Us Page</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/contact.js" defer></script>
 </head>
 <body>
     <header>
@@ -81,6 +82,56 @@
 
     <strong>Business Hours:</strong> Monday - Friday (08:00 - 17:00)
      </p>
+    </section>
+
+    <section>
+
+    <h2>Send Us a Message</h2>
+    <form id="contactForm">
+    <!--created a contact form so new users can send a message to us for questions, compliments, complaints, etc.-->
+
+
+    <label for="contactName">Full Name:</label>
+    <input type="text" id="contactName" name="contactName" required>
+    <span id="contactNameError" class="error"></span>
+    <br>
+    <br>
+     <!--contact name must be written and has to be a text so no special characters and this information is made to be required -->
+
+
+    <label for="contactEmail">Email Address:</label>
+    <input type="email" id="contactEmail" name="contactEmail" required>
+    <span id="contactEmailError" class="error"></span>
+    <br>
+    <br>
+    <!--An email is required from the person and type of input must be like an email-->
+
+
+    <label for="contactType">Message Type:</label>
+    <select id="contactType" name="contactType">
+        <option value="">Select a type</option>
+        <option value="General Question">General Question</option>
+        <option value="Booking Issue">Booking Issue</option>
+        <option value="Complaint">Complaint</option>
+        <option value="Compliment">Compliment</option>
+        <option value="Other">Other</option>
+    </select>
+    <span id="contactTypeError" class="error"></span>
+    <br><br>
+    <!--User must select a type to which we will be able to know why they contacted us-->
+    <label for="contactMessage">Your Message:</label>
+    <br>
+    <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+    <span id="contactMessageError" class="error"></span>
+    <br>
+    <br>
+    <!---using a textarea so the person can write a description of what they want to write about-->
+
+
+    <button type="submit">Send Message</button>
+    <p id="contactResponse" class="success"></p>
+
+    </form>
     </section>
     </main>
     <footer>
