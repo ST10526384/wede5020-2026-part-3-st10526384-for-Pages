@@ -8,6 +8,15 @@
     <meta name="page" content="html tags, structure, images and content ">
     <title>The Destination Page</title>
     <link rel="stylesheet" href="../css/style.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!--Please note that I got this interactive map from the free open source Leaflet libary unpkg CDN with the map tiles from OpenStreetMap-->
+    <!--References are in the readme file -->
+
+    <script src="../js/destination.js" defer></script>
+
 </head>
 <body>
 <header>
@@ -391,6 +400,42 @@
     </p>
    </article>  
    </section>
+</section>
+
+
+<section class="gallery-section">
+   <h2>Photo Gallery</h2>
+   <!--this section is for the photo gallery that is with a lightbox, when a thumbnail is clicked the view of place will be bigger-->
+   <p>Click on any photo below to see it in a bigger view.</p>
+
+   <div class="gallery-grid">
+
+      <img class="gallery-thumb" src="../assets/images/Cape Town.jpg" alt="Cape Town">
+      <img class="gallery-thumb" src="../assets/images/Kruger National Park.jpg" alt="Kruger National Park">
+      <img class="gallery-thumb" src="../assets/images/Johannesburg.jpg" alt="Johannesburg">
+      <img class="gallery-thumb" src="../assets/images/Garden Route.jpg" alt="Garden Route">
+      <img class="gallery-thumb" src="../assets/images/Drakensberg.jpg" alt="Drakensberg">
+      <img class="gallery-thumb" src="../assets/images/Durban.jpg" alt="Durban">
+      <img class="gallery-thumb" src="../assets/images/Cape Town 2.jpg" alt="Cape Town beaches and mountains">
+      <img class="gallery-thumb" src="../assets/images/Garden Route 2.jpg" alt="Garden Route forests">
+   </div>
+</section>
+<!--each image is a thumbnail that can be clicked and the alt text is also used as the caption-->
+
+
+<div id="lightbox" class="lightbox" role="dialog" aria-label="Enlarged image">  
+<!--the lightbox overlay that stays hidden until a thumbnail is finally clicked on-->
+   <span id="lightboxClose" class="lightbox-close" title="Close">&times;</span>
+   <img id="lightboxImg" class="lightbox-img" src="" alt="">
+   <p id="lightboxCaption" class="lightbox-caption"></p>
+</div>
+
+
+<section class="map-section">
+<!--This is the leaflet map where it shows each place/destination is located in South Africa-->
+   <h2>Find Our Destinations on the Map</h2>
+   <p>Explore where each place is located in South Africa by clicking on the markers.</p>
+   <div id="map" class="destination-map"></div>
 </section>
 </main>
 

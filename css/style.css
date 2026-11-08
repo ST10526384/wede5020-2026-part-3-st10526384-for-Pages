@@ -449,3 +449,118 @@ a:active{
   font-weight: bold;
 }
 
+
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+/*lays out the gallery thumbnails in a neat grid*/
+
+.gallery-thumb{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--border-colour);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+/*makes each thumbnail the same size and shows it can be clicked*/
+
+.gallery-thumb:hover,
+.gallery-thumb:focus{
+    transform: scale(1.05);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+}
+/*a small zoom animation when the mouse hovers over a thumbnail*/
+
+
+.lightbox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+/*the dark full screen overlay, hidden until the thumbnail is finally clicked on*/
+
+.lightbox.open{
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+/*shows the overlay with a fade in animation when the classs that is open is added by JavaScript*/
+
+@keyframes fadeIn{
+    from{ opacity: 0; }
+    to{ opacity: 1; }
+}
+
+.lightbox-img{
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    border: 3px solid var(--white);
+}
+/*the big image shown in the middle of the overlay*/
+
+.lightbox-caption{
+    color: var(--white);
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+/*the caption text under the big image*/
+
+.lightbox-close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.lightbox-close:hover{
+    color: var(--cream);
+}
+/*the close button in the top corner of the overlay*/
+
+
+/* The following below is for the leaflet map*/
+
+.destination-map{
+    width: 100%;
+    height: 420px;
+    border-radius: 8px;
+    border: 1px solid var(--border-colour);
+    margin-top: 1rem;
+}
+/*gives the map a set height and a border so it displays properly*/
+
+
+
+@media (max-width: 900px){
+    .gallery-grid{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px){
+    .gallery-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .destination-map{
+        height: 320px;
+    }
+}
+/*makes the gallery and map adapt to tablet and mobile screens*/
