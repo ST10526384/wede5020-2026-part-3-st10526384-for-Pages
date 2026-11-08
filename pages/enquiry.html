@@ -8,6 +8,7 @@
     <meta name="page" content="html tags, structure, images and content ">
     <title>The Enquiry Page</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/enquiry.js" defer></script>
 </head>
 <body>
 <header>
@@ -47,7 +48,6 @@
 
         
 
-    </ul>
     </nav> 
     </header>
     <main>
@@ -72,35 +72,35 @@
 <!--Actual enquiry form being made-->
     <h2>Enquiry Form</h2>
 
-    <form>
+    <form id="enquiryForm">
 <!-- a form is created to collect the person's information the typed--> 
     
     <label for="Full name">Full Name:</label>
     <input type="text"
-    id="full name"
-    name="full name"
+    id="fullname"
+    name="fullname"
     required>
+    <span id="enquiryNameError" class="error"></span>
 <!--Full name must be written and has to be a text so no special characters and this information is made to be required -->
-   <br>
-   <br>
+   
     
    <label for="email">Email Address:</label>
     <input type="email"
     id="email"
     name="email"
     required>
+    <span id="enquiryEmailError" class="error"></span>
 <!--An email is required from the person and type of input must be like an email-->
-    <br>
-    <br>
+    
 
     <label for="phone">Phone Number:</label>
     <input type="tel"
-    id="phone "
+    id="phone"
     name="phone"
     required>
+    <span id="enquiryPhoneError" class="error"></span>
 <!--A phone number is required from the person and input type is tel which is like a phone number-->
-    <br>
-    <br>
+    
 
     <label for="destination">Place of Interest:</label>
     
@@ -115,10 +115,11 @@
         <option value="Kruger National Park">Kruger National Park</option>
 <!--Using the option value so the person can the place of their interest-->
     </select>
-    <br>
-    <br>
+    <span id="enquiryPlaceError" class="error"></span>
+    
 
     <button type="submit">Submit</button>
+    <p id="enquiryResponse" class="success"></p>
 <!--Created a button to be able to submit information-->
 
     </form>
@@ -127,7 +128,7 @@
     
     </section>
     </main>
- <foote>
+ <footer>
     <!--The footer tag is gonna be used for display the copyrights of the website-->
     <p>&copy; 2026 Travelling Service Provider TDP</p> 
     <!--&copy displays the copyrights symbol along with the sentence after it-->   

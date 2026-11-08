@@ -443,3 +443,9 @@ a:active{
     font-size: 0.9rem;
     margin: 0.2rem 0 0;
 }
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
