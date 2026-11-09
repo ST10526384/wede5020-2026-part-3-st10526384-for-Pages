@@ -446,8 +446,59 @@ Lastly I have added the hover zoom for the gallery in the destination page and t
 * Created robots.txt and sitemap.xml
 
 ## Icons:
-I've added some of the icons that I have researched in part 1 and got from the site called Lucide. I used the phone svg, mail svg, calander days svg, 
+I've added some of the icons that I have researched in part 1 and got from the site called Lucide. I used the phone svg, mail svg, calander-days svg, 
 email svg and search svg which are all saved in the assets folder.
+
+## The Finalised File Structure of TDP:
+
+~~~
+.
+├── wede5020-2026-part-3-st10526384-for-Pages/
+├── ├── index.html
+├── ├── 404.html                          
+├── ├── robots.txt
+├── ├── sitemap.xml
+├── ├── README.md
+├── ├── pages/
+├── │   ├── about.html
+├── │   ├── contact.html
+├── │   ├── destination.html
+├── │   ├── destinationvsdestination.html
+├── │   ├── enquiry.html
+├── │   └── travellingassistance.html
+├── ├── css/
+├── │   └── style.css
+├── ├── js/
+├── │   ├── contact.js
+├── │   ├── destination.js
+├── │   ├── destinationvsdestination.js
+├── │   ├── enquiry.js
+├── │   └── travellingassistance.js
+└── └── assets/
+    ├── ├── fonts/
+    ├── │   ├── MontserratAlternates-Bold.ttf
+    ├── │   ├── MontserratAlternates-Regular.ttf
+    ├── │   ├── OpenSans-Bold.ttf
+    ├── │   └── OpenSans-Regular.ttf
+    ├── ├── icons/
+    ├── │   ├── calendar-days.svg
+    ├── │   ├── mail.svg
+    ├── │   ├── phone.svg
+    ├── │   └── search.svg
+    └── └── images/
+        ├── ├── Cape Town.jpg
+        ├── ├── Cape Town 2.jpg
+        ├── ├── Drakensberg.jpg
+        ├── ├── Durban.jpg
+        ├── ├── Garden Route.jpg
+        ├── ├── Garden Route 2.jpg
+        ├── ├── Johannesburg.jpg
+        ├── ├── Kruger National Park.jpg
+        ├── ├── Kruger National Park 2.jpg
+        ├── ├── South Africa Adventure.jpg
+        ├── ├── TDP logo.png
+        └── └── Travelling Support.jpg
+~~~
 
 ## Changelog for part 3:
 ### 7 November 2026
