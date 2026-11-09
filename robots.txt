@@ -5,4 +5,4 @@ User-agent: *
 
 Allow: /
 
-Sitemap: https://emgpsd.github.io/wede5020-2026-part-3-st10526384/sitemap.xml
+Sitemap: https://github.com/EMGPSD/wede5020-2026-part-3-st10526384/blob/main/sitemap.xml
