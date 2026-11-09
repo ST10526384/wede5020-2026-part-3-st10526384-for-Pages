@@ -564,3 +564,49 @@ a:active{
     }
 }
 /*makes the gallery and map adapt to tablet and mobile screens*/
+
+
+
+
+
+.destination-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f5f0e1; 
+  border-radius: 8px;
+}
+/* This is for the search and sort controls on the destination page */
+
+
+.destination-controls label {
+  font-weight: 600;
+  color: #5a3e2b; 
+}
+
+.destination-controls input,
+.destination-controls select {
+  padding: 8px 10px;
+  border: 1px solid #228b22; 
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.no-results {
+  color: #b22222;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+
+.inline-icon{
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.15em;
+    margin-right: 0.3rem;
+}
+/*adjusting the icons and the sizing of them*\

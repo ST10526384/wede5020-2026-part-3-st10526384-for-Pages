@@ -84,3 +84,59 @@ destinations.forEach(function (place) {
     .bindPopup("<strong>" + place.name + "</strong>");
 });
 // goes through every destination and adds a marker with a popup label and also each marker shows the destination/place's name when click on
+
+
+
+
+// The code section below lets the user type to filter the destinations/places and chooses how to sort them
+const searchInput = document.getElementById("destinationSearch");
+const sortSelect = document.getElementById("destinationSort");
+const noResults = document.getElementById("noResults");
+
+const destinationSections = Array.from(document.querySelectorAll(".destination-grid"));
+const introSection = document.querySelector(".destination-intro");
+
+
+function filterDestinations() {
+  const query = searchInput.value.toLowerCase().trim();
+  let matches = 0;
+
+  destinationSections.forEach(function (section) {
+    const card = section.querySelector(".destination-card");
+    const text = card.textContent.toLowerCase();
+    if (text.includes(query)) {
+      section.style.display = "";
+      matches++;
+    } else {
+      section.style.display = "none";
+    }
+  });
+  // This filters the destinations/places that the user typed in the search box
+
+
+  noResults.textContent = matches === 0 ? "No destinations match your search." : "";
+}
+
+
+function sortDestinations() {
+  const order = sortSelect.value;
+  let sorted = destinationSections.slice();
+
+  if (order === "az" || order === "za") {
+    sorted.sort(function (a, b) {
+      const nameA = a.querySelector("h2").textContent.toLowerCase();
+      const nameB = b.querySelector("h2").textContent.toLowerCase();
+      if (nameA < nameB) return order === "az" ? -1 : 1;
+      if (nameA > nameB) return order === "az" ? 1 : -1;
+      return 0;
+    });
+  }
+
+  sorted.forEach(function (section) {
+    introSection.appendChild(section);
+  });
+}
+
+searchInput.addEventListener("keyup", filterDestinations);
+sortSelect.addEventListener("change", sortDestinations);
+// sorts the destinations by name depending on the option 
