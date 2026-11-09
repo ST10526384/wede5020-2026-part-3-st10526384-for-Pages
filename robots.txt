@@ -1,0 +1,8 @@
+# robots.txt for the TDP (Travelling Destination Provider) website
+# This file tells search engine crawlers which pages they are allowed to look at
+
+User-agent: *
+
+Allow: /
+
+Sitemap: https://emgpsd.github.io/wede5020-2026-part-3-st10526384/sitemap.xml
