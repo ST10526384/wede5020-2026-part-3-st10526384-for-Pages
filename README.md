@@ -282,9 +282,198 @@ Zak H, 2024. Skyline view of Sandton in Johannesburg, showcasing modern architec
 
 
 
+# TDP Website Part 3:
+
+## Project Overview:
+In this part 3/ last part I tried and focused on the javascript requirements, adding or improving SEO and making sure the TDP website is ready to be published.
+I have created/added javascript features to make the website more interactive rather than only showing relevant information, I have as well as worked on the SEO in order for the search engines to be able to find and fully understand TDP, I also finally added some icons to the destination page and the contact us page. Lastly I fixed/ worked the feedback I have received from part 2 which has been recorded in the changelog.
+
+## Key Javascript features:
+The website uses javascript features as explained and showed below:
+
+### Photo Gallery with Lightbox:
+
+<img width="1596" height="570" alt="Screenshot 2026-11-09 171944" src="https://github.com/user-attachments/assets/734a9b61-871f-4278-8069-668e13b65cdf" />
+
+The screenshot shows the photo gallery which is on the destination page. When the user clicks on one of the images/thumbnails, it will show the image bigger and shows a caption with the image.
+
+### Map:
+
+<img width="1555" height="667" alt="Screenshot 2026-11-09 171955" src="https://github.com/user-attachments/assets/39a75b68-7216-45b5-bdc2-2218aa595054" />
+
+This is a screenshot of the interactive map on the destination page. This map was implemented with the use of the Leaflet library and also with OpenStreetMap tiles.  Each destination that is on the website is shown and can be clicked on to zoom in or out.
+
+
+### Search & sort:
+
+<img width="1515" height="529" alt="Screenshot 2026-11-09 171920" src="https://github.com/user-attachments/assets/dfcd7672-1a04-42d4-af7f-58c16fb897ea" />
+
+I have added a search and sort feature on the destination page which a user can type in a place's name which the destinations/places are then filtered in real time. The sort feature uses a dropdown to sort the places from A-Z or Z-A and if you type a place that isn't in the website a message will be shown to say nothing matches your search.
+
+### The forms and validations:
+The forms have been used for pages like contact us, enquiry page and travelling assistance page. For e.g. The contact us form checks for user's details until the message is then built into a "mailto" email that opens a user's own email app to be sent to the TDP. The other pages validates and sends a success message.
+The enquiry page gives you information on the place of interest such as price and availability while the travelling assistance page allows you to send a message to TDP's staff so they can respond to you later.
+
+###Destination vs Destination comparing:
+
+<img width="1630" height="882" alt="Screenshot 2026-11-09 174508" src="https://github.com/user-attachments/assets/a2060718-6371-4eae-b177-126f2ec34e8a" />
+
+I have now implemented the javascript to this page. The page allows the user to choose 2 places (they cannot be the same place or the user cannot leave the options blank) and compare their catergories to one another for the user to decide which one is more to their liking.
+
+Here is the javascript file code:
+~~~~
+//This javascript file will be used for the destination vs destination page when it comes to comparing the different places
+
+const places = {
+    "Cape Town": {
+        located: "Western Cape",
+        attractions: "Table Mountain, Camps Bay, V&A Waterfront",
+        activities: "Sightseeing, Fun beach time, watching some entertaining performances, Hiking",
+        visit: "Summer times",
+        travellingrequirements: "Free to travel however you like to"
+    },
+//added information for Cape Town
+
+    "kruger National Park": {
+        located: "Mpumalanga & Limpopo",
+        attractions: "Wildlife, Exploring and see the safari routes, Relaxing, Seeing and exploring the natural landscapes",
+        activities: "Wildlife Sightseeing, Photographing wildlife, Game drives",
+        visit: "Summer, winter or dry times",
+        travellingrequirements: "Drive or take a plane"
+    },
+//added information for The Kruger National Park
+
+    "Johannesburg": {
+       located: "Gauteng",
+        attractions: "Nelson Mandela Square, Montecasino, Gold Reef City, Constitution Hills",
+        activities: "Sightseeing, shopping at places, watch some entertaining performances, Visting museums of South Africa's history, Going on Tour to learn more about the history", 
+        visit: "Anytime",
+        travellingrequirements: "Free to travel however you like to" 
+    },
+//added information for Johannesburg
+
+    "Garden Route District Municipality": {
+       located: "Western Cape and Eastern Cape",
+        attractions: "Stroms River, Knynsa, Plettenberg Bay",
+        activities: "Sightseeing nature, Explore and adventure through forests, Hiking",
+        visit: "Anytime but recommended when it's warm",
+        travellingrequirements: "Recommended to travel on the road to have the full experience"
+    
+    },
+//added information for Garden Route Municipality
+
+    "Drakensberg": {
+        located: "KZN",
+        attractions: "Tugela Falls, Rock art sites, Mountain",
+        activities: "Sightseeing nature, Taking photos, Hiking, nature walks, Mountain Sightseeing",
+        visit: "Cool or dry times",
+        travellingrequirements: "Travel on road"
+    },
+//added information for Drakensburg
+    
+    "Durban": {
+        located: "KZN",
+        attractions: "Durban Botanic Garden, uShaka Marine World, Golden Mile",
+        activities: "Swimming and having fun at the beach, Surfing, Sightseeing",
+        visit: "Anytime but when the warm whether isn't too bad",
+        travellingrequirements: "Free to travel however you like to"
+
+    }
+};
+
+const compareButton = document.getElementById("compareButton")
+
+compareButton.addEventListener("click", function () {
+    const option1 = document.getElementById("destination1").value;
+const option2 = document.getElementById("destination2").value;
+const invalid = document.getElementById("compareError");
+//created constants that will be used 
+
+
+if (option1 === "" || option2 === "" ) {
+    invalid.textContent = "Please choose 2 destinations you would like to compare";
+    return;
+}
+//if both dropdowns don't have a selected destination it will then give this error meesage to the user
+
+if (option1 === option2) {
+    invalid.textContent = "Please select two different places for comparing"
+    return;
+
+}
+//if the same destination has been selected twice then it will return this error message
+
+invalid.textContent = "";
+//This will clear previous errors 
+
+
+const d1 = places[option1];
+const d2 = places[option2];
+
+document.getElementById("name1").textContent = option1;
+document.getElementById("name2").textContent = option2;
+//The two places will be put into the table headings
+
+
+document.getElementById("d1-located").textContent = d1.located
+document.getElementById("d1-attractions").textContent = d1.attractions
+document.getElementById("d1-activities").textContent = d1.activities
+document.getElementById("d1-visit").textContent = d1.visit
+document.getElementById("d1-travellingrequirements").textContent = d1.travellingrequirements
+//The details will be filled in using what has been written in the constants of the places e.g. cape town storing different information
+
+document.getElementById("d2-located").textContent = d2.located
+document.getElementById("d2-attractions").textContent = d2.attractions
+document.getElementById("d2-activities").textContent = d2.activities
+document.getElementById("d2-visit").textContent = d2.visit
+document.getElementById("d2-travellingrequirements").textContent = d2.travellingrequirements
+//The details will be filled in using what has been written in the constants of the places e.g. cape town storing different information
 
 
 
+});
 
+
+~~~~
+
+### CSS and animations:
+Lastly I have added the hover zoom for the gallery in the destination page and the fading in of the lightbox.
+
+## SEO:
+* Gave every page its own titles, descriptions, meta keywords and etc.
+* Implemented open graph tags
+* Checked and made sure that every page has its own h1 (heading 1) and images all have alt texts
+* Created robots.txt and sitemap.xml
+
+## Icons:
+I've added some of the icons that I have researched in part 1 and got from the site called Lucide. I used the phone svg, mail svg, calander days svg, 
+email svg and search svg which are all saved in the assets folder.
+
+## Changelog for part 3:
+### 7 November 2026
+This was my first day on Part 3 and I spent it on JavaScript and fixing up my stylesheet. I started by cleaning the CSS, fixing certain codes in the stylesheet such as duplicated rules and omitted rules, and I added active and accessibility states and fixed the hover for the submit type and buttons. I then created `destinationvsdestination.js` and made a content store to hold the information for each destination and I completed that file. I also added and completed the `travellingassistance` JavaScript fe for the validations.
+
+### 8 November 2026
+This day I implemented the JavaScript into the pages. I hooked the JavaScript up to the destinationvsdestination and travelling assistance pages and added `enquiry.js` and implemented it into `enquiry.html`, and added `contact.js` and implemented it into the contact page HTML for the form validation and the mailto. Lastly I added `destination.js` and implemented the Leaflet map and the thumbnail gallery of all the images on the destination page.
+
+### 9 November 2026
+On this day which is also my last day I focused on the SEO and finishing touches. I added SEO tags (unique title, meta description and keywords plus Open Graph tags) to every page, then added the `robots.txt` and `sitemap.xml` files to the root of the project. After that I added the search and filter feature for the destinations and added the icons to the destination and contact us pages. I also went back and updated `robots.txt` and `sitemap.xml` to make sure the links were correct. This is also where I fixed the Part 2 feedback (the broken logo link in the header) and made sure every page has one main `<h1>` heading for better SEO.
+
+## Part 3 Details:
+
+In Part 3 I turned the TDP website into a fully working interactive site by adding JavaScript, improving the SEO and publishing the website. The site now has a photo gallery with a lightbox, a map of the destinations, a search and sort feature as well forms which have validation. All the Part 2 feedback has been fixed and logged in the changelog above.
+
+## References:
+Leaflet, 2026. Leaflet. [online] Available at: <https://leafletjs.com/> [Accessed 6 November 2026].
+
+Lucide, 2026. Beautiful & consistent icons Made by the community.. [online] Available at: <https://lucide.dev/> [Accessed 8 November 2026].
+
+MDN, 2026. Document: querySelector() method. [online] Available at: <https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector> [Accessed 7 November 2026].
+
+MDN, 2026. EventTarget: addEventListener() method. [online] Available at: <https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener> [Accessed 6 November 2026].
+
+OpenStreetMap, 2026. OpenStreetMap provides map data for thousands of websites, mobile apps, and hardware devices. [online] Available at: <https://www.openstreetmap.org/about> [Accessed 6 November 2026].
+
+W3Schools, 2026. HTML Document Object Model. [online] Available at: <HTML Document Object Model> [Accessed 7 November 2026].
 ---
 
